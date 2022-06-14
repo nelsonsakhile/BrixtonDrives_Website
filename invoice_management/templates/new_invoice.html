@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>New_invoice</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        {% load static%}
+        <!-- Favicon -->
+        <link href="{% static  'img/favicon.ico'%}" rel="icon">
+    
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    
+        <!-- Icon Font Stylesheet -->
+        <link href="{% static 'css/all.min.css' %}" rel="stylesheet">
+        <link href="{%static 'css/fontawesome.min'%}" rel="stylesheet" >
+    
+        <!-- Libraries Stylesheet -->
+        <link href="{% static 'css/animate.min.css'  %}" rel="stylesheet">
+        <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+    
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/stylez.css' %}" rel="stylesheet">
+    </head>
+<body>
+
+        <div class="main-container" style=" width: 95%; margin:auto;">
+            <div class="form-group p-5">
+                <div class="row">
+                    <div class="col-9">
+                        <h1>Add New Invoice/Receipt</h1>
+                        <br>
+                        <form method="post" action="">{% csrf_token %}
+                            <div class="row">
+                                <div class="col-6">
+                                    <label>Invoice Number</label>
+                                    {{ form.invoice_number }}
+                                </div>
+                                <div class="col-6">
+                                    <label>Invoice Date</label>
+                                    {{ form.invoice_date }}
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label>Customer Name</label>
+                                    {{ form.name }}
+                                </div>
+                                <div class="col-6">
+                                    <label>Phone Number</label>
+                                    {{ form.phone_number }}
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-3 col-sm-2">
+                                    <label>Item one</label>
+                                    {{ form.line_one }} 
+                                </div>
+
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Quantity</label>
+                                    {{ form.line_one_quantity }}
+                                </div>
+                                
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Unit Price (R)</label>
+                                    {{ form.line_one_unit_price }}
+                                </div>
+
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Line total (R)</label>
+                                    {{ form.line_one_total_price }}
+                                </div>
+
+
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-lg-6 col-md-3 col-sm-2">
+                                    <label>Item two</label>
+                                    {{ form.line_two }} 
+                                </div>
+
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Quantity</label>
+                                    {{ form.line_two_quantity }}
+                                </div>
+                                
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Unit Price (R)</label>
+                                    {{ form.line_two_unit_price }}
+                                </div>
+
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Line total (R)</label>
+                                    {{ form.line_two_total_price }}
+                                </div>
+
+
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-lg-6 col-md-3 col-sm-2">
+                                    <label>Item three</label>
+                                    {{ form.line_three }} 
+                                </div>
+
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Quantity</label>
+                                    {{ form.line_three_quantity }}
+                                </div>
+                                
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Unit Price (R)</label>
+                                    {{ form.line_three_unit_price }}
+                                </div>
+
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Line total (R)</label>
+                                    {{ form.line_three_total_price }}
+                                </div>
+
+
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-lg-6 col-md-3 col-sm-2">
+                                    <label>Item four</label>
+                                    {{ form.line_four }} 
+                                </div>
+
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Quantity</label>
+                                    {{ form.line_four_quantity }}
+                                </div>
+                                
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Unit Price (R)</label>
+                                    {{ form.line_four_unit_price }}
+                                </div>
+
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Line total (R)</label>
+                                    {{ form.line_four_total_price }}
+                                </div>
+
+
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-lg-6 col-md-3 col-sm-2">
+                                    <label>Item five</label>
+                                    {{ form.line_five }} 
+                                </div>
+
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Quantity</label>
+                                    {{ form.line_five_quantity }}
+                                </div>
+                                
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Unit Price (R)</label>
+                                    {{ form.line_five_unit_price }}
+                                </div>
+
+                                <div class="col-lg-2 col-md-3 col-sm-2">
+                                    <label>Line total (R)</label>
+                                    {{ form.line_five_total_price }}
+                                </div>
+
+
+                            </div>
+                            <br>
+                            
+                            <div class="row">
+                                <div class="col-6">
+                                    <label>Total (R)</label>
+                                    {{ form.total }}
+                                </div>
+                                <div class="col-3">
+                                    <label>Deposit (R)</label>
+                                    {{ form.deposit }}
+                                </div>
+                                <div class="col-3">
+                                    <label>Amount Due (R)</label>
+                                    {{ form.amount_due }}
+                                </div>
+
+                            </div>
+                            
+                            <br>
+                            
+                            <label>Paid</label>
+                            {{ form.paid }}
+                            
+                            <br><br>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <label>Invoice/Reciept</label>
+                                    {{ form.invoice_type }}
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <input  class="btn btn-success" type="submit" value="Save"/>
+                            
+                        
+                        
+                        </form>
+                    </div>
+                    <div class="col-3 " >
+                        <div class="recent p-5" >
+                            <div>
+                                <span>Total Invoices</span>
+                                <span class="list-group-item justify-content lh-condensed">{{ total_invoices }}</span>
+                            </div>
+                            <br><br>
+                            <span>Recent Changes</span>
+                            <br><br>
+                            {% for instance in queryset %}
+                               <ul class="list-group mb-3">
+                                    <li class="list-group-item justify-content lh-condensed">    
+                                        <div >
+                                            <div>{{ instance.name }}</div>
+                                            <div>{{ instance.total_invoices }}</div>
+                                        </div>
+                                        <div>{{ instance.invoice_date }}</div>
+                                    </li>
+                                </ul>
+                                <br>
+                                {% endfor %}
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+            <!-- Template Javascript -->
+
+    <div>
+        <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js'%}"></script>
+    </div>
+
+    <script>
+
+            $(document).ready(function(){
+            
+                $('#id_line_one_quantity, #id_line_one_unit_price, #id_line_two_quantity, #id_line_two_unit_price, #id_line_three_quantity, #id_line_three_unit_price, #id_line_four_quantity, #id_line_four_unit_price, #id_line_five_quantity, #id_line_five_unit_price, #id_deposit').keyup(function(){
+                    var line_one_quantity_text = $('#id_line_one_quantity').val();
+                    var line_one_unit_price_text = $('#id_line_one_unit_price').val();
+                    var line_one_total = line_one_quantity_text * line_one_unit_price_text
+
+                    var line_two_quantity_text = $('#id_line_two_quantity').val();
+                    var line_two_unit_price_text = $('#id_line_two_unit_price').val();
+                    var line_two_total = line_two_quantity_text*line_two_unit_price_text
+
+                    var line_three_quantity_text = $('#id_line_three_quantity').val();
+                    var line_three_unit_price_text = $('#id_line_three_unit_price').val();
+                    var line_three_total = line_three_quantity_text * line_three_unit_price_text
+
+                    var line_four_quantity_text = $('#id_line_four_quantity').val();
+                    var line_four_unit_price_text = $('#id_line_four_unit_price').val();
+                    var line_four_total = line_four_quantity_text * line_four_unit_price_text
+
+                    var line_five_quantity_text = $('#id_line_five_quantity').val();
+                    var line_five_unit_price_text = $('#id_line_five_unit_price').val();
+                    var line_five_total = line_five_quantity_text * line_five_unit_price_text
+
+                    var total = line_one_total + line_two_total + line_three_total + line_four_total + line_five_total
+                    
+                    var deposit = $('#id_deposit').val();
+                    var amount_due = total - deposit
+
+
+                    $('#id_line_one_total_price').val(line_one_total);
+                    $('#id_line_two_total_price').val(line_two_total);
+                    $('#id_line_three_total_price').val(line_three_total);
+                    $('#id_line_four_total_price').val(line_four_total);
+                    $('#id_line_five_total_price').val(line_five_total);
+                    $('#id_total').val(total);
+                    $('#id_amount_due').val(amount_due);
+
+
+                });
+            
+            });
+
+    </script>
+
+
+</body>
+</html>
